@@ -1,0 +1,47 @@
+//Program to find sum and difference between two matrices.
+#include <stdio.h>
+
+void main() {
+    int m1[3][3], m2[3][3], sum[3][3], diff[3][3], i, j;
+
+    // Input elements of the first matrix
+    printf("Enter elements of 3x3 matrix 1:\n");
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            scanf("%d", &m1[i][j]);
+        }
+    }
+
+    // Input elements of the second matrix
+    printf("Enter elements of 3x3 matrix 2:\n");
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            scanf("%d", &m2[i][j]);
+        }
+    }
+
+    // Calculate sum and difference
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            sum[i][j] = m1[i][j] + m2[i][j];
+            diff[i][j] = m1[i][j] - m2[i][j];
+        }
+    }
+
+    // Display results
+    printf("Sum of matrices:\n");
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("%d ", sum[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("Difference of matrices:\n");
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("%d ", diff[i][j]);
+        }
+        printf("\n");
+    }
+}
